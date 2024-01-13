@@ -15,6 +15,7 @@ class TasksViewModel @Inject constructor(): ViewModel() {
     private val _myTaskText = MutableLiveData<String>()
     val myTaskText: LiveData<String> = _myTaskText
 
+
     fun onDialogClose() {
         _showDialog.value = false
     }
