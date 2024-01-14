@@ -1,4 +1,4 @@
-package com.alopgal962.room.addtasks.ui.data
+package com.alopgal962.room.addtasks.data
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

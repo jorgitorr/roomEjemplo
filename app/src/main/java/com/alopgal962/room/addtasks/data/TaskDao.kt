@@ -1,4 +1,4 @@
-package com.alopgal962.room.addtasks.ui.data
+package com.alopgal962.room.addtasks.data
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -16,5 +16,5 @@ interface TaskDao {
     fun getTasks(): Flow<List<TaskEntity>>
 
     @Insert
-    suspend fun addTask(item:TaskEntity)
+    suspend fun addTask(item: TaskEntity)
 }
