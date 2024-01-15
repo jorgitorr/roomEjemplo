@@ -34,10 +34,21 @@ import androidx.lifecycle.ViewModel
 
 @Composable
 fun TasksScreen(tasksViewModel: TasksViewModel) {
-    //Para poder alinear el botón abajo a la derecha del contenedor, le pasamos el modifier con la alineación desde su contenedor...
+    val showDialog: Boolean by tasksViewModel.showDialog.observeAsState(false)
+    val myTaskText: String by tasksViewModel.myTaskText.observeAsState("")
+
     Box(modifier = Modifier.fillMaxSize()) {
+        AddTasksDialog(
+            show = showDialog,
+            myTaskText = myTaskText,
+            onDismiss = { tasksViewModel.onDialogClose() },
+            onTaskAdded = { tasksViewModel.onTaskCreated() },
+            onTaskTextChanged = { tasksViewModel.onTaskTextChanged(it) }
+        )
         FabDialog(
             Modifier.align(Alignment.BottomEnd))
+            //onNewTask = { tasksViewModel.onShowDialogClick() })
+        //TasksList(tasksViewModel)
     }
 }
 
@@ -55,26 +66,6 @@ fun FabDialog(
     }
 }
 
-
-@Composable
-fun TasksScreen(tasksViewModel: TasksViewModel) {
-    val showDialog: Boolean by tasksViewModel.showDialog.observeAsState(false)
-    val myTaskText: String by tasksViewModel.myTaskText.observeAsState("")
-
-    Box(modifier = Modifier.fillMaxSize()) {
-        AddTasksDialog(
-            show = showDialog,
-            myTaskText = myTaskText,
-            onDismiss = { tasksViewModel.onDialogClose() },
-            onTaskAdded = { tasksViewModel.onTaskCreated() },
-            onTaskTextChanged = { tasksViewModel.onTaskTextChanged(it) }
-        )
-        FabDialog(
-            Modifier.align(Alignment.BottomEnd),
-            onNewTask = { tasksViewModel.onShowDialogClick() })
-        TasksList(tasksViewModel)
-    }
-}
 
 
 @OptIn(ExperimentalMaterial3Api::class)
