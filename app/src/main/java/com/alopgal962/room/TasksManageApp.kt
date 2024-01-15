@@ -1,4 +1,4 @@
-package com.alopgal962.room.addtasks
+package com.alopgal962.room
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
