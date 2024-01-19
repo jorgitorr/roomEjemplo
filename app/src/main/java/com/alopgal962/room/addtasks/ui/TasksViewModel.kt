@@ -98,6 +98,10 @@ class TasksViewModel @Inject constructor(
         //El truco está en que no se modifica solo la propiedad selected de tasks[index],
         //sino que se vuelve a reasignar para que la vista vea que se ha actualizado un item y se recomponga.
         //_tasks[index] = _tasks[index].let { it.copy(selected = !it.selected) }
+
+        viewModelScope.launch {
+
+        }
     }
 
 }

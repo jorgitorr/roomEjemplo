@@ -25,4 +25,20 @@ class TaskRepository @Inject constructor(private val taskDao: TaskDao) {
         taskDao.addTask(TaskEntity(taskModel.id,taskModel.task,taskModel.selected))
     }
 
+    suspend fun update(taskModel: TaskModel) {
+        taskDao.updateTask(taskModel.toData())
+    }
+
+    suspend fun delete(taskModel: TaskModel) {
+        taskDao.deleteTask(taskModel.toData())
+    }
+
+    /**
+     * Esto es una función de extensión
+     */
+    fun TaskModel.toData(): TaskEntity {
+        return TaskEntity(this.id, this.task, this.selected)
+    }
+
+
 }

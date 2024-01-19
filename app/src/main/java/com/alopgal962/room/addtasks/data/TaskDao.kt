@@ -19,4 +19,8 @@ interface TaskDao {
 
     @Insert
     suspend fun addTask(item:TaskEntity)
+
+    suspend fun updateTask(item: TaskEntity)
+
+    suspend fun deleteTask(item: TaskEntity)
 }
