@@ -7,6 +7,8 @@ import kotlinx.coroutines.flow.Flow
 
 /**
  * Define una interfaz que contiene métodos para interactuar con la tabla TaskEntity en la base de datos.
+ *
+ * TIENE LOS SQL
  */
 @Dao
 interface TaskDao {
@@ -17,4 +19,8 @@ interface TaskDao {
 
     @Insert
     suspend fun addTask(item:TaskEntity)
+
+    suspend fun updateTask()
+
+    suspend fun deleteTask()
 }

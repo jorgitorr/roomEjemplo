@@ -12,8 +12,8 @@ android {
 
     defaultConfig {
         applicationId = "com.alopgal962.room"
-        minSdk = 34
-        targetSdk = 33
+        minSdk = 26
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

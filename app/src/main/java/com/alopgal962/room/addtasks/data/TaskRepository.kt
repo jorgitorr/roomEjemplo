@@ -20,4 +20,16 @@ class TaskRepository @Inject constructor(private val taskDao: TaskDao) {
     //El método map es cómo un forEach, pero me va a devolver una lista de cada item
     //con la transformación que le hagamos mediante la expresión lambda.
     val tasks: Flow<List<TaskModel>> = taskDao.getTasks().map { items -> items.map { TaskModel(it.id, it.task, it.selected) } }
+
+    suspend fun add(taskModel: TaskModel){
+        taskDao.addTask(TaskEntity(taskModel.id,taskModel.task,taskModel.selected))
+    }
+
+    suspend fun updateTask(taskModel: TaskModel){
+
+    }
+
+    suspend fun deleteTask(taskModel: TaskModel){
+
+    }
 }
