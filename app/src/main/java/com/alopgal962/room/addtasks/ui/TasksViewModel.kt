@@ -7,8 +7,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.alopgal962.room.addtasks.domain.AddTaskUseCase
+import com.alopgal962.room.addtasks.domain.DeleteTaskUseCase
 import com.alopgal962.room.addtasks.domain.GetTasksUseCase
-import com.alopgal962.room.addtasks.model.TaskModel
+import com.alopgal962.room.addtasks.domain.UpdateTaskUseCase
+import com.alopgal962.room.addtasks.ui.model.TaskModel
 import com.alopgal962.room.addtasks.ui.TaskUiState.*
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.SharingStarted
@@ -24,6 +26,8 @@ import javax.inject.Inject
 @HiltViewModel
 class TasksViewModel @Inject constructor(
     private val addTaskUseCase: AddTaskUseCase,
+    private val updateTaskUseCase: UpdateTaskUseCase,
+    private val deleteTaskUseCase: DeleteTaskUseCase,
     getTasksUseCase: GetTasksUseCase
 ): ViewModel() {
     //El caso de uso getTasksUseCase() nos devuelve el Flow continuo y cada vez que actualice
