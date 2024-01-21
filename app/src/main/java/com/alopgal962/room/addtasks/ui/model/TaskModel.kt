@@ -1,4 +1,4 @@
-package com.alopgal962.room.addtasks.model
+package com.alopgal962.room.addtasks.ui.model
 
 //Nuestro modelo de datos...
 //El valor del id por defecto lo vamos a calcular con el momento en el que lo creamos, es decir, el tiempo en milisegundos.
