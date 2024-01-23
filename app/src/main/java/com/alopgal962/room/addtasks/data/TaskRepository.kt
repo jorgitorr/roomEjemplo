@@ -1,6 +1,6 @@
 package com.alopgal962.room.addtasks.data
 
-import com.alopgal962.room.addtasks.model.TaskModel
+import com.alopgal962.room.addtasks.ui.model.TaskModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 import javax.inject.Inject
