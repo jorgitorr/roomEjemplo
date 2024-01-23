@@ -1,7 +1,7 @@
 package com.alopgal962.room.addtasks.domain
 
 import com.alopgal962.room.addtasks.data.TaskRepository
-import com.alopgal962.room.addtasks.model.TaskModel
+import com.alopgal962.room.addtasks.ui.model.TaskModel
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

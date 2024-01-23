@@ -1,6 +1,6 @@
 package com.alopgal962.room.addtasks.ui
 
-import com.alopgal962.room.addtasks.model.TaskModel
+import com.alopgal962.room.addtasks.ui.model.TaskModel
 
 /**
  * Estados de la pantalla

@@ -39,7 +39,7 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.repeatOnLifecycle
-import com.alopgal962.room.addtasks.model.TaskModel
+import com.alopgal962.room.addtasks.ui.model.TaskModel
 
 //screens + ViewModel
 /***
